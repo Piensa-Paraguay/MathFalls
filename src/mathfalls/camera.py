@@ -13,7 +13,10 @@ os.environ.setdefault("MPLCONFIGDIR", str(_temp_dir / "mathfalls-mpl"))
 os.environ.setdefault("XDG_CACHE_HOME", str(_temp_dir / "mathfalls-cache"))
 
 import cv2
-from mediapipe.solutions import face_mesh, hands
+import mediapipe as mp
+face_mesh = mp.solutions.face_mesh
+hands = mp.solutions.hands
+
 
 
 def discover_cameras(max_index: int = 6) -> list[int]:
