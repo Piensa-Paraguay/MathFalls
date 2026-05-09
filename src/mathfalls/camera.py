@@ -13,9 +13,15 @@ os.environ.setdefault("MPLCONFIGDIR", str(_temp_dir / "mathfalls-mpl"))
 os.environ.setdefault("XDG_CACHE_HOME", str(_temp_dir / "mathfalls-cache"))
 
 import cv2
-import mediapipe as mp
-face_mesh = mp.solutions.face_mesh
-hands = mp.solutions.hands
+try:
+    import mediapipe.solutions.face_mesh as face_mesh
+    import mediapipe.solutions.hands as hands
+except (ImportError, AttributeError):
+    try:
+        from mediapipe.python.solutions import face_mesh, hands
+    except (ImportError, AttributeError):
+        print("ERROR: No se pudo encontrar mediapipe.solutions. Asegúrate de que 'mediapipe' esté instalado correctamente.")
+        raise
 
 
 
