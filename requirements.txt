@@ -1,4 +1,4 @@
-mediapipe==0.10.21
+mediapipe==0.10.30
 opencv-python>=4.8,<5
-pygame>=2.5
+pygame-ce>=2.5
 pyinstaller>=6.0

@@ -8,9 +8,9 @@ version = "0.1.0"
 description = "Juego matematico de dos jugadores controlado por camara."
 requires-python = ">=3.10"
 dependencies = [
-    "mediapipe==0.10.21",
+    "mediapipe==0.10.30",
     "opencv-python>=4.8,<5",
-    "pygame>=2.5",
+    "pygame-ce>=2.5",
 ]
 
 [project.optional-dependencies]
