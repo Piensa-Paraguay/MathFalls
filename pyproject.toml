@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mathfalls"
+version = "0.1.0"
+description = "Juego matematico de dos jugadores controlado por camara."
+requires-python = ">=3.10"
+dependencies = [
+    "mediapipe==0.10.21",
+    "opencv-python>=4.8,<5",
+    "pygame>=2.5",
+]
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6.0"]
+
+[project.scripts]
+mathfalls = "mathfalls.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mathfalls = ["assets/*.png", "assets/*.svg"]
